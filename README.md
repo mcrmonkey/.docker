@@ -37,5 +37,10 @@ Run like this:
     -v "${HOME}/.gnupg:/home/user/.gnupg:ro" -v /etc/localtime:/etc/localtime:ro mcrmonkey/mutt
 
 
+### rainbowstream
 
+TUI for twitter
+
+This does some stuff with oauth tokens which it saves to disk. If you dont make
+any allowances for it they will disappear when the container is rm'd
 

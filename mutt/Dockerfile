@@ -1,4 +1,4 @@
-FROM alpine:edge
+FROM alpine:latest
 LABEL maintainer "ant <git@manchestermonkey.co.uk>"
 
 RUN addgroup -g 1000 user \
