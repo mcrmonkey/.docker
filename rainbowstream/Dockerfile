@@ -1,5 +1,5 @@
 FROM alpine:latest
-Maintainer ant
+LABEL maintainer "ant <git@manchestermonkey.co.uk>"
 
 RUN apk --no-cache add \
 	build-base ca-certificates \

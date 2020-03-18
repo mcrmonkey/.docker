@@ -7,11 +7,8 @@
 #
 
 FROM debian:stretch
-# LABEL maintainer "Jessie Frazelle <jess@linux.com>"
-# my mess now...
-LABEL maintainer "ant"
+LABEL maintainer "ant <git@manchestermonkey.co.uk>"
 
-# Tell debconf to run in non-interactive mode
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update && apt-get install -y \
@@ -52,8 +49,12 @@ RUN apt-get update && apt-get -y install \
 	&& rm -rf /var/lib/apt/lists/*
 
 ENV HOME /home/user
-RUN useradd --create-home --home-dir $HOME user \
-	&& chown -R user:user $HOME
+
+
+RUN useradd --create-home --home-dir $HOME user
+
+ADD settings.json /home/user/.config/Code/User/
+RUN	chown -R user:user $HOME
 
 COPY start.sh /usr/local/bin/start.sh
 
