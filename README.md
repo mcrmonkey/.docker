@@ -1,9 +1,8 @@
-# .docker
+# docker-files
 
-Some dockerfiles
+Some docker files for things
 
-Inspiration taken from @jessfraz's
-[Dockerfiles](https://www.github.com/jessfraz)
+Inspiration taken from @jessfraz's [Dockerfiles](https://www.github.com/jessfraz)
 
 
 ## Containers
@@ -22,7 +21,6 @@ Quick example:
 will return your agenda.
 
 See https://github.com/insanum/gcalcli for more info and options
-
 
 
 ### mutt
@@ -44,3 +42,19 @@ TUI for twitter
 This does some stuff with oauth tokens which it saves to disk. If you dont make
 any allowances for it they will disappear when the container is rm'd
 
+
+### vscode
+
+A code editor
+
+Map your `.config` dir to `/home/user/.config` to keep config across container
+runs
+
+### atom
+
+The other code editor
+
+
+### gopass
+
+gopass in a container.
